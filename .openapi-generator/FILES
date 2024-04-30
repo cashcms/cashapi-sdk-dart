@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 README.md
 analysis_options.yaml
 build.yaml
@@ -42,18 +41,3 @@ lib/src/model/cashcms_upload_credits.dart
 lib/src/model/cashcms_user.dart
 lib/src/model/emaopay_emaopay_order.dart
 pubspec.yaml
-test/cashcms_attachment_test.dart
-test/cashcms_category_test.dart
-test/cashcms_credentials_test.dart
-test/cashcms_login_params_test.dart
-test/cashcms_login_response_test.dart
-test/cashcms_membership_test.dart
-test/cashcms_paged_response_cashcms_post_test.dart
-test/cashcms_post_attachment_record_test.dart
-test/cashcms_post_test.dart
-test/cashcms_register_params_test.dart
-test/cashcms_tag_test.dart
-test/cashcms_upload_credits_test.dart
-test/cashcms_user_test.dart
-test/default_api_test.dart
-test/emaopay_emaopay_order_test.dart
