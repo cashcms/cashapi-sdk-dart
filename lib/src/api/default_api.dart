@@ -1394,7 +1394,7 @@ _responseData = rawData == null ? null : deserialize<CashcmsPost, CashcmsPost>(r
     );
 
     final _queryParameters = <String, dynamic>{
-      if (categoryId != null) r'category_id': categoryId,
+      if (categoryId != null) r'categoryId': categoryId,
       if (category != null) r'category': category,
       if (tag != null) r'tag': tag,
       r'pageIndex': pageIndex,
