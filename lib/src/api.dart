@@ -10,7 +10,7 @@ import 'package:cash_api/src/auth/oauth.dart';
 import 'package:cash_api/src/api/default_api.dart';
 
 class CashApi {
-  static const String basePath = r'http://cashcms.dev/v2';
+  static const String basePath = r'http://cashcms.dev';
 
   final Dio dio;
   CashApi({

@@ -5,7 +5,7 @@
 import 'package:cash_api/api.dart';
 ```
 
-All URIs are relative to *http://cashcms.dev/v2*
+All URIs are relative to *http://cashcms.dev*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

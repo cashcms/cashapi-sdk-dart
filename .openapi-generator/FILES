@@ -43,4 +43,3 @@ lib/src/model/cashcms_upload_credits.dart
 lib/src/model/cashcms_user.dart
 lib/src/model/emaopay_emaopay_order.dart
 pubspec.yaml
-test/cashcms_payment_method_test.dart

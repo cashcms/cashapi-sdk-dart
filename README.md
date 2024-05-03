@@ -63,7 +63,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://cashcms.dev/v2*
+All URIs are relative to *http://cashcms.dev*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
