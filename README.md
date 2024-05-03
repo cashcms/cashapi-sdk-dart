@@ -20,7 +20,7 @@ For more information, please visit [https://cashcms.dev/support](https://cashcms
 To use the package from [pub.dev](https://pub.dev), please include the following in pubspec.yaml
 ```yaml
 dependencies:
-  cash_api: 
+  cash_api: 1.1.24
 ```
 
 ### Github
