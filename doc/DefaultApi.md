@@ -27,6 +27,7 @@ Method | HTTP request | Description
 [**getCoverUploadCredits**](DefaultApi.md#getcoveruploadcredits) | **GET** /api/posts/cover-upload-credits | 获取封面上传凭证
 [**getMembershipOrder**](DefaultApi.md#getmembershiporder) | **GET** /api/memberships/order | 获取会员订阅订单
 [**getMemberships**](DefaultApi.md#getmemberships) | **GET** /api/memberships | 获取会员订阅计划
+[**getPaymentMethods**](DefaultApi.md#getpaymentmethods) | **GET** /api/memberships/paymentMethods | 获取支持的支付方式
 [**getPostById**](DefaultApi.md#getpostbyid) | **GET** /api/posts/{id} | 获取文章
 [**getPostPagedList**](DefaultApi.md#getpostpagedlist) | **GET** /api/posts | 获取文章列表
 [**getTagById**](DefaultApi.md#gettagbyid) | **GET** /api/tags/{id} | 获取标签信息
@@ -708,7 +709,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getMembershipOrder**
-> EmaopayEmaopayOrder getMembershipOrder(membership)
+> EmaopayEmaopayOrder getMembershipOrder(membership, paymentMethod)
 
 获取会员订阅订单
 
@@ -720,9 +721,10 @@ import 'package:cash_api/api.dart';
 
 final api = CashApi().getDefaultApi();
 final String membership = membership_example; // String | 会员类型
+final String paymentMethod = paymentMethod_example; // String | 支付方式
 
 try {
-    final response = api.getMembershipOrder(membership);
+    final response = api.getMembershipOrder(membership, paymentMethod);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling DefaultApi->getMembershipOrder: $e\n');
@@ -734,6 +736,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **membership** | **String**| 会员类型 | 
+ **paymentMethod** | **String**| 支付方式 | [optional] 
 
 ### Return type
 
@@ -777,6 +780,45 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;CashcmsMembership&gt;**](CashcmsMembership.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getPaymentMethods**
+> List<CashcmsPaymentMethod> getPaymentMethods()
+
+获取支持的支付方式
+
+获取支持的支付方式
+
+### Example
+```dart
+import 'package:cash_api/api.dart';
+
+final api = CashApi().getDefaultApi();
+
+try {
+    final response = api.getPaymentMethods();
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling DefaultApi->getPaymentMethods: $e\n');
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List&lt;CashcmsPaymentMethod&gt;**](CashcmsPaymentMethod.md)
 
 ### Authorization
 

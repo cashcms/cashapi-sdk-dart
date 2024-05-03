@@ -15,6 +15,7 @@ import 'package:cash_api/src/model/cashcms_login_params.dart';
 import 'package:cash_api/src/model/cashcms_login_response.dart';
 import 'package:cash_api/src/model/cashcms_membership.dart';
 import 'package:cash_api/src/model/cashcms_paged_response_cashcms_post.dart';
+import 'package:cash_api/src/model/cashcms_payment_method.dart';
 import 'package:cash_api/src/model/cashcms_post.dart';
 import 'package:cash_api/src/model/cashcms_post_attachment_record.dart';
 import 'package:cash_api/src/model/cashcms_register_params.dart';
@@ -1138,6 +1139,7 @@ _responseData = rawData == null ? null : deserialize<CashcmsUploadCredits, Cashc
   ///
   /// Parameters:
   /// * [membership] - 会员类型
+  /// * [paymentMethod] - 支付方式
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -1149,6 +1151,7 @@ _responseData = rawData == null ? null : deserialize<CashcmsUploadCredits, Cashc
   /// Throws [DioException] if API call or serialization fails
   Future<Response<EmaopayEmaopayOrder>> getMembershipOrder({ 
     required String membership,
+    String? paymentMethod,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1171,6 +1174,7 @@ _responseData = rawData == null ? null : deserialize<CashcmsUploadCredits, Cashc
 
     final _queryParameters = <String, dynamic>{
       r'membership': membership,
+      if (paymentMethod != null) r'paymentMethod': paymentMethod,
     };
 
     final _response = await _dio.request<Object>(
@@ -1267,6 +1271,75 @@ _responseData = rawData == null ? null : deserialize<List<CashcmsMembership>, Ca
     }
 
     return Response<List<CashcmsMembership>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// 获取支持的支付方式
+  /// 获取支持的支付方式
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [List<CashcmsPaymentMethod>] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<List<CashcmsPaymentMethod>>> getPaymentMethods({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/api/memberships/paymentMethods';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    List<CashcmsPaymentMethod>? _responseData;
+
+    try {
+final rawData = _response.data;
+_responseData = rawData == null ? null : deserialize<List<CashcmsPaymentMethod>, CashcmsPaymentMethod>(rawData, 'List<CashcmsPaymentMethod>', growable: true);
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<List<CashcmsPaymentMethod>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

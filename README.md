@@ -85,6 +85,7 @@ Class | Method | HTTP request | Description
 [*DefaultApi*](doc/DefaultApi.md) | [**getCoverUploadCredits**](doc/DefaultApi.md#getcoveruploadcredits) | **GET** /api/posts/cover-upload-credits | 获取封面上传凭证
 [*DefaultApi*](doc/DefaultApi.md) | [**getMembershipOrder**](doc/DefaultApi.md#getmembershiporder) | **GET** /api/memberships/order | 获取会员订阅订单
 [*DefaultApi*](doc/DefaultApi.md) | [**getMemberships**](doc/DefaultApi.md#getmemberships) | **GET** /api/memberships | 获取会员订阅计划
+[*DefaultApi*](doc/DefaultApi.md) | [**getPaymentMethods**](doc/DefaultApi.md#getpaymentmethods) | **GET** /api/memberships/paymentMethods | 获取支持的支付方式
 [*DefaultApi*](doc/DefaultApi.md) | [**getPostById**](doc/DefaultApi.md#getpostbyid) | **GET** /api/posts/{id} | 获取文章
 [*DefaultApi*](doc/DefaultApi.md) | [**getPostPagedList**](doc/DefaultApi.md#getpostpagedlist) | **GET** /api/posts | 获取文章列表
 [*DefaultApi*](doc/DefaultApi.md) | [**getTagById**](doc/DefaultApi.md#gettagbyid) | **GET** /api/tags/{id} | 获取标签信息
@@ -106,6 +107,7 @@ Class | Method | HTTP request | Description
  - [CashcmsLoginResponse](doc/CashcmsLoginResponse.md)
  - [CashcmsMembership](doc/CashcmsMembership.md)
  - [CashcmsPagedResponseCashcmsPost](doc/CashcmsPagedResponseCashcmsPost.md)
+ - [CashcmsPaymentMethod](doc/CashcmsPaymentMethod.md)
  - [CashcmsPost](doc/CashcmsPost.md)
  - [CashcmsPostAttachmentRecord](doc/CashcmsPostAttachmentRecord.md)
  - [CashcmsRegisterParams](doc/CashcmsRegisterParams.md)

@@ -5,6 +5,7 @@ import 'package:cash_api/src/model/cashcms_login_params.dart';
 import 'package:cash_api/src/model/cashcms_login_response.dart';
 import 'package:cash_api/src/model/cashcms_membership.dart';
 import 'package:cash_api/src/model/cashcms_paged_response_cashcms_post.dart';
+import 'package:cash_api/src/model/cashcms_payment_method.dart';
 import 'package:cash_api/src/model/cashcms_post.dart';
 import 'package:cash_api/src/model/cashcms_post_attachment_record.dart';
 import 'package:cash_api/src/model/cashcms_register_params.dart';
@@ -45,6 +46,8 @@ final _regMap = RegExp(r'^Map<String,(.*)>$');
           return CashcmsMembership.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CashcmsPagedResponseCashcmsPost':
           return CashcmsPagedResponseCashcmsPost.fromJson(value as Map<String, dynamic>) as ReturnType;
+        case 'CashcmsPaymentMethod':
+          return CashcmsPaymentMethod.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CashcmsPost':
           return CashcmsPost.fromJson(value as Map<String, dynamic>) as ReturnType;
         case 'CashcmsPostAttachmentRecord':

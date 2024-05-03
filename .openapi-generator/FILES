@@ -9,6 +9,7 @@ doc/CashcmsLoginParams.md
 doc/CashcmsLoginResponse.md
 doc/CashcmsMembership.md
 doc/CashcmsPagedResponseCashcmsPost.md
+doc/CashcmsPaymentMethod.md
 doc/CashcmsPost.md
 doc/CashcmsPostAttachmentRecord.md
 doc/CashcmsRegisterParams.md
@@ -33,6 +34,7 @@ lib/src/model/cashcms_login_params.dart
 lib/src/model/cashcms_login_response.dart
 lib/src/model/cashcms_membership.dart
 lib/src/model/cashcms_paged_response_cashcms_post.dart
+lib/src/model/cashcms_payment_method.dart
 lib/src/model/cashcms_post.dart
 lib/src/model/cashcms_post_attachment_record.dart
 lib/src/model/cashcms_register_params.dart
@@ -41,3 +43,4 @@ lib/src/model/cashcms_upload_credits.dart
 lib/src/model/cashcms_user.dart
 lib/src/model/emaopay_emaopay_order.dart
 pubspec.yaml
+test/cashcms_payment_method_test.dart

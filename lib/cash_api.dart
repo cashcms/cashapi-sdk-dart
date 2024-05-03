@@ -17,6 +17,7 @@ export 'package:cash_api/src/model/cashcms_login_params.dart';
 export 'package:cash_api/src/model/cashcms_login_response.dart';
 export 'package:cash_api/src/model/cashcms_membership.dart';
 export 'package:cash_api/src/model/cashcms_paged_response_cashcms_post.dart';
+export 'package:cash_api/src/model/cashcms_payment_method.dart';
 export 'package:cash_api/src/model/cashcms_post.dart';
 export 'package:cash_api/src/model/cashcms_post_attachment_record.dart';
 export 'package:cash_api/src/model/cashcms_register_params.dart';
